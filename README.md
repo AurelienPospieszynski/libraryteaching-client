@@ -1,27 +1,59 @@
-# Libraryclient
+# Library Management System (Client)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.10.
+## Description
 
-## Development server
+This part of the application serves as the frontend for the Library Management System. It provides a user interface for interacting with the library's catalog, including viewing, adding, updating, and deleting books, authors, and borrowing records.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+The main goal of this project is to serve as a practical introduction to Angular and frontend development, complementing the backend services developed with Node.js, Fastify, and PostgreSQL.
 
-## Code scaffolding
+The focus is mainly about implementing services, handling datas, interacting with a backend. No UI focus at all in this repo.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Technos
 
-## Build
+- [Angular](https://angular.io/docs) v17: A platform and framework for building single-page client applications using HTML and TypeScript.
+- [RxJS](https://rxjs.dev/guide/overview): A library for reactive programming using observables that makes it easier to compose asynchronous or callback-based code.
+- [Bootstrap](https://getbootstrap.com/docs/): A free and open-source CSS framework directed at responsive, mobile-first front-end web development.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Getting Started
 
-## Running unit tests
+1. Clone the frontend repository:
+   `git clone [urlFrontendProject]`
+2. Navigate to the project directory:
+   `cd libraryteaching-client`
+3. Install dependencies:
+   `npm install`
+4. Serve the application:
+   `ng serve`
+5. Open your browser and go to:
+   `http://localhost:4200`
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Features
 
-## Running end-to-end tests
+- A dynamic interface for managing books, authors, and borrowing records.
+- Forms for adding and editing entities with validation.
+- Error handling and user feedback.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Project Structure
 
-## Further help
+- `/src/app/components`: Angular components for each major section of the application (books, authors, borrow records).
+- `/src/app/services`: Services for handling HTTP requests to the backend.
+- `/src/environments`: Environment-specific configuration files.
+- `src/app/app.component.*`: Root component files.
+- `src/app/app.module.ts`: Root module definition.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Integration with Backend
+
+The frontend interacts with the backend through HTTP requests facilitated by Angular's `HttpClient`. Ensure that the backend server is running and accessible at `http://localhost:3000`.
+
+## Development Notes
+
+- This project was generated with [Angular CLI](https://github.com/angular/angular-cli).
+- For styling, [Bootstrap](https://getbootstrap.com/) is used and can be customized in `/src/styles.scss`.
+
+## Contributing
+
+Contributions to improve the application are welcome. Please follow the standard fork-and-pull request workflow.
+
+## License
+
+This project is open-sourced under the [MIT license](https://opensource.org/licenses/MIT).
