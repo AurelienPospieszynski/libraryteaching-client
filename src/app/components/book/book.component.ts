@@ -1,6 +1,6 @@
-import { Book } from './../models/book';
+import { Book } from '../../models/book';
 import { Component, OnInit } from '@angular/core';
-import { BookService } from '../services/book/book.service';
+import { BookService } from '../../services/book/book.service';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -18,6 +18,5 @@ export class BookComponent implements OnInit {
 
   async ngOnInit() {
     this.books = await this.bookService.getAllBooks();
-    console.log(this.books);
   }
 }
