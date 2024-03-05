@@ -1,11 +1,10 @@
-<h1>Liste des livres</h1>
+<button (click)="toggleBookList()">Liste des livres</button>
 
-@if(books.length > 0) {
-<ul>
-  @for(book of books; track book.bookid) {
-  <li>{{ book.title }} {{ book.publicationyear }}</li>
-  }
+<ul *ngIf="showBookList && books.length > 0">
+  <li *ngFor="let book of books; trackBy: trackByBookId">{{ book.title }} {{ book.publicationyear }}</li>
 </ul>
-} @else {
-<p>Aucun livre</p>
-}
+
+<p *ngIf="showBookList && books.length === 0">Aucun livre</p>
+
+
+

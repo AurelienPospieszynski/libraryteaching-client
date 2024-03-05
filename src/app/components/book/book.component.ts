@@ -12,11 +12,20 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./book.component.css'],
 })
 export class BookComponent implements OnInit {
-  books: Book[] = []; // Cette propriété stockera les livres récupérés
+  books: Book[] = [];
+  showBookList: boolean = false;
 
   constructor(private bookService: BookService) {}
 
   async ngOnInit() {
     this.books = await this.bookService.getAllBooks();
+  }
+
+  toggleBookList() {
+    this.showBookList = !this.showBookList;
+  }
+
+  trackByBookId(index: number, book: Book): number {
+    return book.bookid; 
   }
 }

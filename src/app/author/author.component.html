@@ -1,0 +1,7 @@
+<button (click)="toggleAuthorList()">Liste des auteurs</button>
+
+<ul *ngIf="showAuthorList && authors.length > 0">
+  <li *ngFor="let author of authors; trackBy: trackByAuthorId">{{ author.name }} {{ author.bio }}</li>
+</ul>
+
+<p *ngIf="showAuthorList && authors.length === 0">Aucun auteur</p>
