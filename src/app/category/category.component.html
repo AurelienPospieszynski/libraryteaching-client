@@ -1,0 +1,7 @@
+<button (click)="toggleCategoryList()">Liste des catégories</button>
+
+<ul *ngIf="showCategoryList && categories.length > 0">
+  <li *ngFor="let category of categories; trackBy: trackByCategoryId">{{ category.name }} {{ category.description }}</li>
+</ul>
+
+<p *ngIf="showCategoryList && categories.length === 0">Aucune catégorie</p>
