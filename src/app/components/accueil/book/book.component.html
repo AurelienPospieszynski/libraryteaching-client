@@ -1,0 +1,8 @@
+<mat-form-field>
+  <mat-label>Livres</mat-label>
+  <mat-select>
+    <mat-option *ngFor="let book of books; trackBy: trackByBookId" [value]="book.bookid">
+      {{ book.title }} {{ book.publicationyear }}
+    </mat-option>
+  </mat-select>
+</mat-form-field>

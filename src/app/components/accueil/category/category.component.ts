@@ -1,6 +1,6 @@
-import { Category } from './../models/category';
+import { Category } from '../../../models/category';
 import { Component, OnInit } from '@angular/core';
-import { CategoryService } from '../services/category/category.service';
+import { CategoryService } from '../../../services/category/category.service';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -9,7 +9,6 @@ import { CommonModule } from '@angular/common';
   imports: [CommonModule],
   providers: [CategoryService],
   templateUrl: './category.component.html',
-  styleUrls: ['./category.component.css'],
 })
 export class CategoryComponent implements OnInit {
   categories: Category[] = [];
