@@ -1,8 +1,9 @@
-<mat-form-field>
-  <mat-label>Livres</mat-label>
-  <mat-select>
-    <mat-option *ngFor="let book of books; trackBy: trackByBookId" [value]="book.bookid">
-      {{ book.title }} {{ book.publicationyear }}
-    </mat-option>
-  </mat-select>
-</mat-form-field>
+<div class="relative">
+  <button (click)="toggleBookList()" class="text-colorBlue">Livres</button>
+  <div *ngIf="showBookList" class="absolute left-0 z-10 mt-2 overflow-y-auto bg-white border border-gray-300 rounded shadow-md top-full max-h-48">
+    <input type="text" [(ngModel)]="searchTerm" placeholder="Chercher livres..." class="SearchButton">
+    <ul>
+      <li *ngFor="let book of filteredBooks; trackBy: trackByBookId">{{ book.title }} {{ book.publicationyear }}</li>
+    </ul>
+  </div>
+</div>
